@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import GlobalContextProvider from './context/GlobalContext';
+import NavBar from './components/NavBar';
+import { Route, Routes } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import AboutUs from './pages/AboutUs';
+import ContactUs from './pages/ContactUs';
+import Gallery from './pages/Gallery';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GlobalContextProvider>
+      <NavBar/>
+      <Routes>
+      <Route path='/' element={<HomePage />}></Route>
+      <Route path='/about' element={<AboutUs />}></Route>
+      <Route path='/contact' element={<ContactUs />}></Route>
+      <Route path='/gallery' element={<Gallery />}></Route>
+      </Routes>
+      </GlobalContextProvider>
+        
     </div>
   );
 }
 
 export default App;
+

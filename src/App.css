@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
+:root
+{
+--clr1:#A8B4B0;
+--clr2:#566160;
+--clr3:#333C40;
+--clr4:#050500;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body
+{
+
+}
+/*Layout styles*/
+.layout
+{
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/*Booking form styles*/
+.booking-form-container
+{
+
 }
 
-.App-link {
-  color: #61dafb;
+.booking-form-container h1
+{
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.booking-form-container .booking-form
+{
+
+}
+
+
+/*Call-to-action-styles*/
+.cta
+{
+
+}
+
+.cta button
+{
+
+}
+
+.cta button:hover
+{
+
+}
+/*Hero styles*/
+.hero
+{
+
+}
+
+.hero-image
+{
+
+}
+
+.hero-text
+{
+
+}
+/*NavBar styles*/
+.navbar
+{
+
+}
+
+.navbar.active
+{
+
+}
+
+.navbar ul
+{
+
+}
+
+.navbar.active ul li
+{
+
+}
+.navbar ul li
+{
+
+}
+.navbar ul li a
+{
+
+}
+.navbar ul li a:hover
+{
+
+}
+
+/*Toggle-switch styles*/
+.toggle-switch{}
+
+.toggle-switch.active
+{}
+
+.toogle-switch .toggle-switch-icon
+{
+
+}
+/*NavLink styles*/
+.navlink
+{
+
+}
+
+.navlink-icon{}
+
+.navlink-name{}
+/*Home page styles*/
+.home-page
+{
+
+}
+/*About Us page styles*/
+.about-us-page
+{
+
+}
+/*Contact Us page styles*/
+.contact-us-page
+{}
+
+/*Gallery page styles*/
+.gallery-page
+{
+
+}
+
+.gallery-page .gallery-container
+{
+
+}
+
+/*header styles*/
+.header
+/*footer styles*/
+.footer
+{
+
+}
+
+@media (max-width: 768px)
+{
+    .navbar
+    {
+
+    }
+    .navbar ul
+    {
+
+    }
+    .navbar ul li
+    {
+
+    }
+    .navbar ul li a
+    {
+
+    }
 }

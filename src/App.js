@@ -2,6 +2,7 @@
 import './App.css';
 import GlobalContextProvider from './context/GlobalContext';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 import { Route, Routes } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutUs from './pages/AboutUs';
@@ -18,6 +19,7 @@ function App() {
       <Route path='/contact' element={<ContactUs />}></Route>
       <Route path='/gallery' element={<Gallery />}></Route>
       </Routes>
+      <Footer />
       </GlobalContextProvider>
         
     </div>

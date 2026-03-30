@@ -1,5 +1,4 @@
 import { createContext, useState } from "react";
-import { FaDeaf } from "react-icons/fa";
 
 export const GlobalContext = createContext();
 

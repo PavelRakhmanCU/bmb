@@ -83,7 +83,6 @@ const BookingForm = () => {
 
   return (
     <div className="booking-form-container">
-      <h1>Booking Form</h1>
       <form className="booking-form" onSubmit={handleSubmit} noValidate>
         <div className="booking-form-grid">
           <div className="booking-field">
@@ -205,11 +204,13 @@ const BookingForm = () => {
           ) : null}
         </div>
 
-        <button type="submit" className="booking-submit-btn">
-          Submit Request
-        </button>
+        <div className="booking-form-actions">
+          <button type="submit" className="booking-submit-btn">
+            Submit Request
+          </button>
 
-        {status ? <p className="booking-status">{status}</p> : null}
+          {status ? <p className="booking-status">{status}</p> : null}
+        </div>
       </form>
     </div>
   );

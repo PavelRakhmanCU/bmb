@@ -1,31 +1,15 @@
-import React, { useEffect, useState } from "react";
-import { useForm, ValidationError } from "@formspree/react";
-
-// Formspree dashboard: https://formspree.io/forms → your form → Integration
-// Public endpoint: https://formspree.io/f/mreolnjb
-// Override via REACT_APP_FORMSPREE_FORM_ID in `.env` if you create a new form later.
-const FORMSPREE_FORM_ID = process.env.REACT_APP_FORMSPREE_FORM_ID ?? "mreolnjb";
-
-const newSubject = () =>
-  `BMB Booking Request ${new Date().toISOString()}-${Math.random()
-    .toString(36)
-    .slice(2, 8)}`;
-
+import React, { useState } from "react";
+// Form endpoint: https://formspree.io/f/mreolnjb
 const BookingForm = () => {
-  const [formState, submitToFormspree, resetFormspree] = useForm(FORMSPREE_FORM_ID, {
-    data: {
-      submittedAt: () => new Date().toISOString(),
-    },
-  });
-  const { submitting, succeeded, errors: submissionErrors } = formState;
-
   const [formValues, setFormValues] = useState({
     firstName: "",
     lastName: "",
     contactNumber: "",
     email: "",
     notes: "",
-    subject: newSubject(),
+    subject: `BMB Booking Request ${new Date().toISOString()}-${Math.random()
+      .toString(36)
+      .slice(2, 8)}`,
   });
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("");
@@ -70,31 +54,9 @@ const BookingForm = () => {
     const { name, value } = event.target;
     setFormValues((prev) => ({ ...prev, [name]: value }));
     setErrors((prev) => ({ ...prev, [name]: "" }));
-    if (status) {
-      setStatus("");
-    }
   };
 
-  useEffect(() => {
-    if (!succeeded) {
-      return;
-    }
-    setStatus(
-      "Thank you! Your booking request has been sent. We will get back to you soon."
-    );
-    setFormValues({
-      firstName: "",
-      lastName: "",
-      contactNumber: "",
-      email: "",
-      notes: "",
-      subject: newSubject(),
-    });
-    setErrors({});
-    resetFormspree();
-  }, [succeeded, resetFormspree]);
-
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     const validationErrors = validate(formValues);
 
@@ -104,18 +66,24 @@ const BookingForm = () => {
       return;
     }
 
-    setStatus("");
-    await submitToFormspree(event);
+    const submissionPayload = {
+      firstName: formValues.firstName.trim(),
+      lastName: formValues.lastName.trim(),
+      contactNumber: formValues.contactNumber.trim(),
+      email: formValues.email.trim().toLowerCase(),
+      notes: formValues.notes.trim(),
+      subject: formValues.subject.trim(),
+      submittedAt: new Date().toISOString(),
+    };
+
+    // This object is ready to send to Formspree/backend.
+    console.log("Booking form payload:", submissionPayload);
+    setStatus("Form validated. Submission payload is ready to send.");
   };
 
   return (
     <div className="booking-form-container">
-      <form
-        className="booking-form"
-        onSubmit={handleSubmit}
-        noValidate
-        aria-busy={submitting}
-      >
+      <form className="booking-form" onSubmit={handleSubmit} noValidate>
         <div className="booking-form-grid">
           <div className="booking-field">
             <label htmlFor="firstName">First Name</label>
@@ -129,7 +97,6 @@ const BookingForm = () => {
               aria-invalid={Boolean(errors.firstName)}
               aria-describedby={errors.firstName ? "firstName-error" : undefined}
               required
-              disabled={submitting}
             />
             {errors.firstName ? (
               <p id="firstName-error" className="field-error">
@@ -150,7 +117,6 @@ const BookingForm = () => {
               aria-invalid={Boolean(errors.lastName)}
               aria-describedby={errors.lastName ? "lastName-error" : undefined}
               required
-              disabled={submitting}
             />
             {errors.lastName ? (
               <p id="lastName-error" className="field-error">
@@ -171,7 +137,6 @@ const BookingForm = () => {
               aria-invalid={Boolean(errors.contactNumber)}
               aria-describedby={errors.contactNumber ? "contactNumber-error" : undefined}
               required
-              disabled={submitting}
             />
             {errors.contactNumber ? (
               <p id="contactNumber-error" className="field-error">
@@ -192,7 +157,6 @@ const BookingForm = () => {
               aria-invalid={Boolean(errors.email)}
               aria-describedby={errors.email ? "email-error" : undefined}
               required
-              disabled={submitting}
             />
             {errors.email ? (
               <p id="email-error" className="field-error">
@@ -213,7 +177,6 @@ const BookingForm = () => {
             aria-invalid={Boolean(errors.notes)}
             aria-describedby={errors.notes ? "notes-error" : undefined}
             required
-            disabled={submitting}
           />
           {errors.notes ? (
             <p id="notes-error" className="field-error">
@@ -231,7 +194,6 @@ const BookingForm = () => {
             value={formValues.subject}
             onChange={handleChange}
             readOnly
-            tabIndex={-1}
             aria-invalid={Boolean(errors.subject)}
             aria-describedby={errors.subject ? "subject-error" : undefined}
           />
@@ -243,17 +205,9 @@ const BookingForm = () => {
         </div>
 
         <div className="booking-form-actions">
-          <button type="submit" className="booking-submit-btn" disabled={submitting}>
-            {submitting ? "Sending…" : "Submit Request"}
+          <button type="submit" className="booking-submit-btn">
+            Submit Request
           </button>
-
-          {submissionErrors ? (
-            <ValidationError
-              errors={submissionErrors}
-              prefix="Could not send your request."
-              className="field-error booking-status"
-            />
-          ) : null}
 
           {status ? <p className="booking-status">{status}</p> : null}
         </div>

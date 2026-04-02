@@ -2,8 +2,8 @@ import React from "react";
 import { FaInstagramSquare } from "react-icons/fa";
 import { BsFillTelephoneFill } from "react-icons/bs";
 
-/** Replace with the client's real Instagram profile URL. */
-const INSTAGRAM_URL = "https://www.instagram.com/";
+
+const INSTAGRAM_URL = "https://www.instagram.com/boston.modern.bath?igsh=NWN3ZmczNDF2ajJw";
 
 /** Dummy number — replace with the client's real number. */
 const CONTACT_DISPLAY = "(608) 335-5223";

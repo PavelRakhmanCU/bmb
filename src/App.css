@@ -574,6 +574,52 @@ button {
   white-space: pre-line;
 }
 
+.about-us-story {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+  align-items: center;
+}
+
+.about-us-story__figure {
+  margin: 0;
+  flex-shrink: 0;
+  width: min(100%, 14rem);
+}
+
+.about-us-story__portrait {
+  --portrait-outline-w: 0.125rem;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: center top;
+  outline: var(--portrait-outline-w) solid var(--clr4);
+  outline-offset: var(--portrait-outline-w);
+  box-shadow:
+    0 0.25rem 0.625rem rgba(0, 0, 0, 0.14),
+    0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.08);
+}
+
+.about-us-story__text {
+  margin: 0;
+  width: 100%;
+  min-width: 0;
+  white-space: pre-line;
+}
+
+@media (min-width: 40rem) {
+  .about-us-story {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .about-us-story__figure {
+    width: min(40%, 13.5rem);
+  }
+}
+
 .gallery-page .gallery-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18.5rem, 1fr));

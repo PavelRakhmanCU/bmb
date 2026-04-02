@@ -3,6 +3,10 @@ import React from "react";
 const sections = [
   {
     title: "Our Story",
+    portrait: {
+      src: "/images/portrait.jpeg",
+      alt: "Peter Kashaev",
+    },
     content: `
 I'm Peter Kashaev, and if you ever find yourself lost in the winding streets of Samarkand, chances are I'll be the one pointing you towards the nearest tea house. Growing up in Central Asia, I developed a taste for adventure and a knack for solving problems - skills that would eventually lead me to start my own construction company.
 
@@ -46,7 +50,22 @@ const AboutUs = () => {
             <h2 id={`about-section-${index}`} className="about-us-section__title">
               {section.title}
             </h2>
-            <div className="about-us-section__body">{section.content.trim()}</div>
+            {section.portrait ? (
+              <div className="about-us-section__body about-us-story">
+                <figure className="about-us-story__figure">
+                  <img
+                    className="about-us-story__portrait"
+                    src={section.portrait.src}
+                    alt={section.portrait.alt}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+                <div className="about-us-story__text">{section.content.trim()}</div>
+              </div>
+            ) : (
+              <div className="about-us-section__body">{section.content.trim()}</div>
+            )}
           </section>
         ))}
       </div>

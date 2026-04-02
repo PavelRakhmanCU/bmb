@@ -1,3 +1,4 @@
+// The GalleryItem component displays: title, before/after photos, and a short description.
 import React from "react";
 
 const GalleryItem = ({ title, beforeImage, afterImage, description }) => {

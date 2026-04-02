@@ -6,8 +6,8 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 const INSTAGRAM_URL = "https://www.instagram.com/";
 
 /** Dummy number — replace with the client's real number. */
-const CONTACT_DISPLAY = "(555) 123-4567";
-const CONTACT_TEL = "+15551234567";
+const CONTACT_DISPLAY = "(608) 335-5223";
+const CONTACT_TEL = "+16083355223";
 
 const Footer = () => {
   return (

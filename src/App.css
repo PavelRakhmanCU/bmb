@@ -30,12 +30,22 @@ body,
 #root {
   min-height: 100%;
 }
-
 body {
   margin: 0;
-  background: var(--bg);
   color: var(--text);
   overflow-x: hidden;
+  /* Base + overlay: semi-transparent tint so the photo reads softly behind content */
+  background-color: var(--bg);
+  background-image:
+    linear-gradient(
+      rgba(245, 247, 246, 0.82),
+      rgba(245, 247, 246, 0.9)
+    ),
+    url("https://images.pexels.com/photos/19878533/pexels-photo-19878533.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
 
 a {

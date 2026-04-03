@@ -124,16 +124,6 @@ const galleryData = [
     "description": "Brighter tones and thoughtful placement open the space up."
   },
   {
-    "imageURL": "https://uc1c8b39328019eaf8cf755a4cbe.previews.dropboxusercontent.com/p/thumb/AC9qDdFW0KMqJxP4Q7hkPulgF1Q7qWjc5TSdznpgcswOI6ZBmo4Jcc2Glkd6sSheRXugzDMlP0ZWIErjQXQ4fmqT4kSRVvRsGmWBLNw6H4NrfgxDxVTVssxenJWB1YjDDf8qA2aohmR1C1pqwQJLkOnpX0nLK6ViOl8UU-0n7jPSBYa8sZWEUGKxaft06R7_Z8tlfSRfLpVfrQBVi8Op495tTA2EkjmzWsQGwFgjzFroqRNAavlqIHAc0eaGMXb5U7TiJ38eiEvMxoQir9PRPn-ctJhElF-dSzm7XwU4ymN8i_iXBAC0UWgpT9ogykDFxusvjqxWXeCCmHF5n41KrgzDN_EHeV21h-AKyihIdN6y5Q/p.jpeg",
-    "title": "A Fresh Look",
-    "description": "Renovation reveals hidden potential."
-  },
-  {
-    "imageURL": "https://uc1c8b39328019eaf8cf755a4cbe.previews.dropboxusercontent.com/p/thumb/AC9qDdFW0KMqJxP4Q7hkPulgF1Q7qWjc5TSdznpgcswOI6ZBmo4Jcc2Glkd6sSheRXugzDMlP0ZWIErjQXQ4fmqT4kSRVvRsGmWBLNw6H4NrfgxDxVTVssxenJWB1YjDDf8qA2aohmR1C1pqwQJLkOnpX0nLK6ViOl8UU-0n7jPSBYa8sZWEUGKxaft06R7_Z8tlfSRfLpVfrQBVi8Op495tTA2EkjmzWsQGwFgjzFroqRNAavlqIHAc0eaGMXb5U7TiJ38eiEvMxoQir9PRPn-ctJhElF-dSzm7XwU4ymN8i_iXBAC0UWgpT9ogykDFxusvjqxWXeCCmHF5n41KrgzDN_EHeV21h-AKyihIdN6y5Q/p.jpeg",
-    "title": "Classic Refresh",
-    "description": "Respects what worked before while moving the look forward."
-  },
-  {
     "imageURL": "https://uc51d3ac23e263b00697d991e781.previews.dropboxusercontent.com/p/thumb/AC_HNfCft1ILHHwfgrt1RFnV1UglrYKKVBg_YErNDXrIcdOt7Mo_EGRxmrZTM8RwmPs7ACrs0dR4ZJNwN_mjHc4CIIYZ5ymH8OQ2J32MhDy6Js303iKtpBfTTWpqLTm-YQwraBtQ7zkK9woXlvhmfdUMH08OfSOn7mtf2rTpaDKFle8qeJ4PN0Rp7PkVjC3s-69nRommbiLiF95KA8TiXC6TAUtwojA6NITMlkm-Qfayr3csjXz5QpHtGmjwz-OzGOotSMbJdvnqTzDpdEvskbP2MDkdDltP73gDeVY5I2zm9vvywobtfyOPxx2rNrmIEfNhS-S4u4Omy1fthHFtuZWh34mV_movZbKPWXtTAbXJLQ/p.jpeg",
     "title": "Subtle Upgrade",
     "description": "Noticeable improvement without chasing trends for their own sake."
@@ -142,16 +132,6 @@ const galleryData = [
     "imageURL": "https://uc24bd8bf77b7889c380484f9d35.previews.dropboxusercontent.com/p/thumb/AC-Oxsz68ERFoNbjaWIJUJ3-qSj5dN-hyfVB8JVgunaz4y9QWtUNz3LhdiD_8J_s3LCJ-aWxHua8mkmHcnEkkcALQfQo7iEDRhYSgfqszD2kSWa_lC3SFRNAEv5WszSD0wdiJNLeN-wodAycXUuvlbewyQ_0s_icjEiOCnXoVJ4kV1X_5FijacjcQ-ql2bQULcSlD7jBQeUH5MV8a_FJT1i4s1aYT-IVYcaqYYffLuCpEMQCUh18pzAJg2tCAA020KeFnKdPkO1LePiNjC515mr4Zdb8UoRYJ042a8ySkFAQGxvjR0ZrieE5KqxnsTkRkplz4rvuuUa5P0YHvFQ66plb0PkLUamiBN-dHjdbtWt8kg/p.jpeg",
     "title": "Confident Lines",
     "description": "Layout and trim read clean from every angle."
-  },
-  {
-    "imageURL": "https://uc24bd8bf77b7889c380484f9d35.previews.dropboxusercontent.com/p/thumb/AC-Oxsz68ERFoNbjaWIJUJ3-qSj5dN-hyfVB8JVgunaz4y9QWtUNz3LhdiD_8J_s3LCJ-aWxHua8mkmHcnEkkcALQfQo7iEDRhYSgfqszD2kSWa_lC3SFRNAEv5WszSD0wdiJNLeN-wodAycXUuvlbewyQ_0s_icjEiOCnXoVJ4kV1X_5FijacjcQ-ql2bQULcSlD7jBQeUH5MV8a_FJT1i4s1aYT-IVYcaqYYffLuCpEMQCUh18pzAJg2tCAA020KeFnKdPkO1LePiNjC515mr4Zdb8UoRYJ042a8ySkFAQGxvjR0ZrieE5KqxnsTkRkplz4rvuuUa5P0YHvFQ66plb0PkLUamiBN-dHjdbtWt8kg/p.jpeg",
-    "title": "Inviting Finish",
-    "description": "The completed work feels ready to use from day one."
-  },
-  {
-    "imageURL": "https://uc24bd8bf77b7889c380484f9d35.previews.dropboxusercontent.com/p/thumb/AC-Oxsz68ERFoNbjaWIJUJ3-qSj5dN-hyfVB8JVgunaz4y9QWtUNz3LhdiD_8J_s3LCJ-aWxHua8mkmHcnEkkcALQfQo7iEDRhYSgfqszD2kSWa_lC3SFRNAEv5WszSD0wdiJNLeN-wodAycXUuvlbewyQ_0s_icjEiOCnXoVJ4kV1X_5FijacjcQ-ql2bQULcSlD7jBQeUH5MV8a_FJT1i4s1aYT-IVYcaqYYffLuCpEMQCUh18pzAJg2tCAA020KeFnKdPkO1LePiNjC515mr4Zdb8UoRYJ042a8ySkFAQGxvjR0ZrieE5KqxnsTkRkplz4rvuuUa5P0YHvFQ66plb0PkLUamiBN-dHjdbtWt8kg/p.jpeg",
-    "title": "Purposeful Design",
-    "description": "Each change earned its place in the overall plan."
   },
   {
     "imageURL": "https://uc5c58b6dfde89da74516f1ec0c2.previews.dropboxusercontent.com/p/thumb/AC-b2MLEiXErcf6wAa4_leeY9NlPL1yFuRXg1FewfGZvu-W1zrR-wT7pPI17W6wJsi23h2yfo3eb-U5p6J5LRorZ1EzQN8KV_STu6oUE1lSpKr4rczi_yevkW2IrG7xaVCO8qpPS6TcdrY_qp59KN79ds8fbPAJq2jF7JWlCaTtwlb4-Q2eCbNxdKSJ6aX-h-pOMwHhGFtsV6p57pYuwtB6120QSKNonvGcOqiqxVdfI7-1wduRJRfQcISrwI1eM0W0syVHWiiHihyVRdiMbCcPiERjjkY-8EhggLz8-uefTzHYGyKAuBX79eLAoZjdbzLUcfJf5txOCijZH2RW3t94ZgaeilBU18rX5hQbKFhMHTw/p.jpeg",
@@ -167,11 +147,6 @@ const galleryData = [
     "imageURL": "https://ucba449f8e8b8fe3b5728fff549e.previews.dropboxusercontent.com/p/thumb/AC8RHz69aIMejEVx_EIrYT7kI6AOnmwnniUGG2P7S9j2oZHiUZEcMOK1pJ4H6P0HYsIA8aXEVuWb1stO42wzKQZq2QiBEDOyYS5IBBYQyks8aGNWOby0NttQQXDpBG4kV6XL8iFHv9IaRHOLKKdPhgllDPvAiEBESBdg-0N9d5ERR_cXwpAj1ySDqqtWQVEsHwppSFSW16ajDoQpXsvsoIwViS6nOSl8S0iuKDiYTriG1aYoIzYu6SyHebgYKo-I_PDjS9Z9be0bUedFPITDGuz-dLufYq50vVxN5AUJuJpMu6IyraEwlYNFzg_Ff8B5OuERqj5k4BFVh3xVB5jvsvqfxgLrp7Amm8osh2mau3rXCA/p.jpeg",
     "title": "Built to Last",
     "description": "Renovation choices aimed at years of steady performance."
-  },
-  {
-    "imageURL": "https://ucba449f8e8b8fe3b5728fff549e.previews.dropboxusercontent.com/p/thumb/AC8RHz69aIMejEVx_EIrYT7kI6AOnmwnniUGG2P7S9j2oZHiUZEcMOK1pJ4H6P0HYsIA8aXEVuWb1stO42wzKQZq2QiBEDOyYS5IBBYQyks8aGNWOby0NttQQXDpBG4kV6XL8iFHv9IaRHOLKKdPhgllDPvAiEBESBdg-0N9d5ERR_cXwpAj1ySDqqtWQVEsHwppSFSW16ajDoQpXsvsoIwViS6nOSl8S0iuKDiYTriG1aYoIzYu6SyHebgYKo-I_PDjS9Z9be0bUedFPITDGuz-dLufYq50vVxN5AUJuJpMu6IyraEwlYNFzg_Ff8B5OuERqj5k4BFVh3xVB5jvsvqfxgLrp7Amm8osh2mau3rXCA/p.jpeg",
-    "title": "New Perspective",
-    "description": "The same footprint feels broader and more useful."
   },
   {
     "imageURL": "https://ucd46ade5b6519b87304fbeeaf4e.previews.dropboxusercontent.com/p/thumb/AC_9340M4NFKjG-jxLUpQsq-F0pgBSG5FUVgW4hkKxItp0KUIW9BSpPKqYlwmkKMg7T0SkYbVq2GVr-AFhFmUhfFbA7OVndsfcMhCQnJHoXts3PW8M_sjaIVUsVNVFdTUWn0_XikCeuWjfo21hREhNMG6-TXilvosV5imYFdFcuIK0bL1a_5-K6WTe6i-MjbZFNz41WZ9T7bfzyTJzEeJXk3AZCTJuzh6MtChXY4UDyaxpHVbbxfchkHajeOF0eDcpzhSHg7GNBbo6a00_agJl-IT8FdkuClH_eFEOGdDDCMmG_Wi5GjnbqFHg9yYxoSvW2SAWTc7cXyE5qfKR0qEGhfsIIACgeXXvGtpmC4WVdFRA/p.jpeg",

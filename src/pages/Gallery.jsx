@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
+import { MdClose } from "react-icons/md";
 import GalleryItem from "../components/GalleryItem";
 
 const galleryData = [
@@ -230,6 +231,33 @@ const galleryData = [
 ];
 
 const Gallery = () => {
+  const [lightbox, setLightbox] = useState(null);
+  const closeBtnRef = useRef(null);
+
+  const openLightbox = useCallback((item) => {
+    setLightbox(item);
+  }, []);
+
+  const closeLightbox = useCallback(() => {
+    setLightbox(null);
+  }, []);
+
+  useEffect(() => {
+    if (!lightbox) return undefined;
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") closeLightbox();
+    };
+    document.addEventListener("keydown", onKeyDown);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const t = window.setTimeout(() => closeBtnRef.current?.focus(), 0);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = prevOverflow;
+      window.clearTimeout(t);
+    };
+  }, [lightbox, closeLightbox]);
+
   return (
     <div className="gallery-page">
       <h1>Gallery</h1>
@@ -241,9 +269,54 @@ const Gallery = () => {
             imageURL={item.imageURL}
             title={item.title}
             description={item.description}
+            onImageClick={openLightbox}
           />
         ))}
       </div>
+
+      {lightbox ? (
+        <div
+          className="gallery-lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label={
+            lightbox.title ? `Enlarged view: ${lightbox.title}` : "Enlarged image"
+          }
+          onClick={closeLightbox}
+        >
+          <div
+            className="gallery-lightbox__content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="gallery-lightbox__media">
+              <button
+                ref={closeBtnRef}
+                type="button"
+                className="gallery-lightbox__close"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  closeLightbox();
+                }}
+                aria-label="Close enlarged image"
+              >
+                <MdClose aria-hidden />
+              </button>
+              <img
+                className="gallery-lightbox__image"
+                src={lightbox.imageURL}
+                alt={
+                  lightbox.title
+                    ? `Renovation project: ${lightbox.title}`
+                    : "Renovation project photo"
+                }
+              />
+            </div>
+            {lightbox.title ? (
+              <p className="gallery-lightbox__title">{lightbox.title}</p>
+            ) : null}
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 };

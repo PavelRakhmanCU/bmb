@@ -1,23 +1,18 @@
-// The GalleryItem component displays: title, before/after photos, and a short description.
 import React from "react";
 
-const GalleryItem = ({ title, beforeImage, afterImage, description }) => {
+const GalleryItem = ({ title, description, imageURL }) => {
   return (
     <article className="gallery-item">
       <h2 className="gallery-item-title">{title}</h2>
-
-      <div className="gallery-item-images">
-        <figure className="gallery-image-block">
-          <img src={beforeImage} alt={`${title} before renovation`} loading="lazy" />
-          <figcaption>Before</figcaption>
-        </figure>
-
-        <figure className="gallery-image-block">
-          <img src={afterImage} alt={`${title} after renovation`} loading="lazy" />
-          <figcaption>After</figcaption>
-        </figure>
-      </div>
-
+      <figure className="gallery-item__figure">
+        <img
+          className="gallery-item__image"
+          src={imageURL}
+          alt={title ? `Renovation project: ${title}` : "Renovation project photo"}
+          loading="lazy"
+          decoding="async"
+        />
+      </figure>
       <p className="gallery-item-description">{description}</p>
     </article>
   );
